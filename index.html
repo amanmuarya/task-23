@@ -3,142 +3,195 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AppName - Build Amazing Products </title>
-    <!-- here link tailwind css  -->
-     <link rel="stylesheet" href="style.css">
+    <title>AppName - Build Amazing Products</title>
+    <!-- here to link tailwind css -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="font-sans antialiased text-gray-800 bg-gray-50">
+    <!-- nave bar  -->
     <nav class="sticky top-0 z-50 bg-white shadow-sm border-b border-gray-100">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+
             <div class="flex justify-between items-center h-16">
-        <div class="flex-shrink-0 flex items-center cursor-pointer">
-          <span class="text-2xl font-bold text-gray-900">🚀 App-DataAnailish</span>
-       </div>
-                <!-- here creat nave bar -->
-         <div class="hidden md:flex items-center space-x-8">
-    <a href="#"
-      class="text-gray-600 hover:text-blue-600 font-medium transition duration-150">Features</a>
-     <a href="#"
-class="text-gray-600 hover:text-blue-600 font-medium transition duration-150">Pricing</a>
-    <a href="#" class="text-gray-600 hover:text-blue-600 font-medium transition duration-150">About</a>
-    <a href="#"
-     class="text-gray-600 hover:text-blue-600 font-medium transition duration-150">Contact</a>
-     <button
+<!--  Logo text is exactly 'AppName -->
+<div class="flex-shrink-0 flex items-center cursor-pointer">
+           <span class="text-2xl font-bold text-gray-900">🚀 AppName</span>
+             </div>
+                <!-- Desktop Nav Links -->
+                <div class="hidden md:flex items-center space-x-8">
+        <a href="#"
+         class="text-gray-600 hover:text-blue-600 font-medium transition duration-150">Features</a>
+       <a href="#"
+            class="text-gray-600 hover:text-blue-600 font-medium transition duration-150">Pricing</a>
+        <a href="#" class="text-gray-600 hover:text-blue-600 font-medium transition duration-150">About</a>
+  <a href="#"
+         class="text-gray-600 hover:text-blue-600 font-medium transition duration-150">Contact</a>
+                    <button
          class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-lg font-medium transition duration-200 shadow-sm">
-    Get Started
+   Get Started
+    </button>
+                </div>
+         <!-- Hamburger menu button with JS toggle -->
+                <div class="flex md:hidden items-center">
+<button id="hamburger-btn" onclick="toggleMenu()"
+   class="text-gray-600 hover:text-gray-900 focus:outline-none">
+            
+            <svg id="icon-open" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"  d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+      <!-- Close icon , hidden by default -->
+ <svg id="icon-close" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24"
+       stroke="currentColor">
+       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+       d="M6 18L18 6M6 6l12 12" />
+        </svg>
+     </button>
+      </div>
+            </div>
+        </div>
+        <!----> Mobile dropdown menu, hidden by default, toggled by JS -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-4 pb-4">
+            <div class="flex flex-col space-y-3 pt-3">
+                <a href="#"
+     class="text-gray-600 hover:text-blue-600 font-medium transition duration-150 py-1">Features</a>
+    <a href="#"
+     class="text-gray-600 hover:text-blue-600 font-medium transition duration-150 py-1">Pricing</a>
+      <a href="#" class="text-gray-600 hover:text-blue-600 font-medium transition duration-150 py-1">About</a>
+     <a href="#"
+       class="text-gray-600 hover:text-blue-600 font-medium transition duration-150 py-1">Contact</a>
+                <button
+    class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-lg font-medium transition duration-200 shadow-sm w-full text-left">
+     Get Started
      </button>
             </div>
-     <div class="flex md:hidden items-center">
-           <button class="text-gray-600 hover:text-gray-900 focus:outline-none">
-          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            />
-          </svg>
-       </button>
-        </div>
-    </div>
         </div>
     </nav>
+    <!-- HERO section -->
     <section class="bg-gradient-to-br from-blue-50 via-white to-indigo-50 py-16 lg:py-24 overflow-hidden">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-8">
-       <div class="flex-1 text-center lg:text-left space-y-8">
-        <h1
-           class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight leading-tight">
-      Build Amazing <br class="hidden lg:block" />
-        Products <span
-       class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Faster</span>
-      </h1>
-    <p class="mt-4 text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto lg:mx-0">
-        AppName is a modern SaaS platform designed to help teams build, collaborate, and launch scalable
-     products efficiently. Join thousands of teams shipping better software today.
-    </p>
-       <div class="mt-8 flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
-         <button
-             class="bg-blue-600 hover:bg-green-700 text-white px-8 py-3.5 rounded-lg font-semibold shadow-lg shadow-blue-200 transition duration-200">
-            Start Free Trial
-        </button>
-         <button
-      class="bg-white hover:bg-gray-50 text-gray-700 border border-gray-200 px-8 py-3.5 rounded-lg font-semibold shadow-sm transition duration-200 flex items-center justify-center gap-2">
+                <div class="flex-1 text-center lg:text-left space-y-8">
+                    <h1
+    class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight leading-tight">
+     Build Amazing <br class="hidden lg:block" />
+       Products <span
+         class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Faster</span>
+       </h1>
+     <p class="mt-4 text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto lg:mx-0">
+       AppName is a modern SaaS platform designed to help teams build, collaborate, and launch scalable
+products efficiently. Join thousands of teams shipping better software today.
+                    </p>
+      <div class="mt-8 flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+<button
+       class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3.5 rounded-lg font-semibold shadow-lg shadow-blue-200 transition duration-200">
+      Start Free Trial
+</button>
+<button
+class="bg-white hover:bg-gray-50 text-gray-700 border border-gray-200 px-8 py-3.5 rounded-lg font-semibold shadow-sm transition duration-200 flex items-center justify-center gap-2">
+                            <!--  Complete play-button SVG icon -->
          <svg class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
-          <path fill-rule="evenodd"
-       clip-rule="evenodd"></path>
-            </svg>
-            Watch Demo
-        </button>
-            </div>
-                </div>
-                <div class="flex-1 w-full max-w-xl lg:max-w-none mx-auto">
-        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
-                        alt="Dashboard Preview"
-           class="w-full object-cover h-64 md:h-80 lg:h-96 rounded-2xl shadow-2xl ring-1 ring-gray-900/5">
-     </div>
+<path fill-rule="evenodd" clip-rule="evenodd"
+d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" />
+</svg>
+Watch Demo
+    </button>
+    </div>
+    </div>
+        <div class="flex-1 w-full max-w-xl lg:max-w-none mx-auto">
+        <img src="daisbord.webp"
+        alt="Dashboard Preview"
+        class="w-full object-cover h-64 md:h-80 lg:h-96 rounded-2xl shadow-2xl ring-1 ring-gray-900/5">
+    </div>
             </div>
         </div>
     </section>
+    <!-- FEATURES SECTION -->
     <section class="py-20 bg-white">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Powerful Features.</h2>
                 <p class="mt-4 text-lg text-gray-600">Everything you need to scale your application, without the
-         complexity.</p>
+                    complexity.</p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div
-                    class="bg-gray-50 p-8 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 ease-in-out border border-gray-100">
-                    <div class="bg-blue-100 w-14 h-14 rounded-lg flex items-center justify-center mb-6">
-                        <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M13 10V3L4 14h7v7l9-11h-7z" />
-          </svg>
-           </div>
-          <h3 class="text-xl font-bold text-gray-900 mb-3">Lightning Fast</h3>
-       <p class="text-gray-600 leading-relaxed">
-               Optimized for speed and performance. Experience rapid load times and seamless interactions
-               across all devices.
-         </p>
-        </div>
-       <div
-        class="bg-gray-50 p-8 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 ease-in-out border border-gray-100">
-           <div class="bg-indigo-100 w-14 h-14 rounded-lg flex items-center justify-center mb-6">
-             <svg class="w-7 h-7 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"    
-             </svg>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1: Lightning Fast -->
+<div
+class="bg-gray-100 p-8 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 ease-in-out border border-gray-300">
+<div class="bg-blue-200 w-14 h-14 rounded-lg flex items-center justify-center mb-6">
+<!-- Complete lightning bolt SVG -->
+<svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+d="M13 10V3L4 14h7v7l9-11h-7z" />
+</svg>
+</div>
+<h3 class="text-xl font-bold text-gray-900 mb-3">Lightning Fast</h3>
+<p class="text-gray-600 leading-relaxed">
+Optimized for speed and performance. Experience rapid load times and seamless interactions
+across all devices.
+</p>
+</div>
+      <!-- Card 2: Secure -->
+          <div
+class="bg-gray-100 p-8 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 ease-in-out border border-gray-300">
+<div class="bg-indigo-100 w-14 h-14 rounded-lg flex items-center justify-center mb-6">
+<!-- Complete shield/lock SVG for Secure -->
+<svg class="w-7 h-7 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                        </svg>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">Secure</h3>
                     <p class="text-gray-600 leading-relaxed">
-                        Enterprise-grade security built-in. Your data is encrypted and protected with industry-leading
+Enterprise-grade security built-in. Your data is encrypted and protected with industry-leading
                         protocols.
                     </p>
                 </div>
+                <!-- Card 3: Analytics -->
                 <div
-                    class="bg-gray-50 p-8 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 ease-in-out border border-gray-100">
-                    <div class="bg-purple-100 w-14 h-14 rounded-lg flex items-center justify-center mb-6">
-                        <svg class="w-7 h-7 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"  />
-          </svg>
-        </div>
-  <h3 class="text-xl font-bold text-gray-900 mb-3">Analytics</h3>
-   <p class="text-gray-600 leading-relaxed">
+      class="bg-gray-100 p-8 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 ease-in-out border border-gray-300">
+  <div class="bg-purple-100 w-14 h-14 rounded-lg flex items-center justify-center mb-6">
+     <!-- Complete bar-chart SVG for Analytics -->
+         <svg class="w-7 h-7 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+           d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+   </svg>
+     </div>
+         <h3 class="text-xl font-bold text-gray-900 mb-3">Analytics</h3>
+         <p class="text-gray-600 leading-relaxed">
              Gain actionable insights with our powerful built-in dashboard. Track user behavior and measure
-            your success.
-         </p>
-         </div>
-      </div>
+         your success.
+     </p>
+     </div>
+     </div>
         </div>
     </section>
-    <footer class="bg-gray-900 text-gray-300 py-10 border-t border-gray-800">
+    <!--  Footer with correct copyright text -->
+    <footer class="bg-gray-800 text-gray-300 py-10 border-t border-gray-700">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
-         <div class="text-xl font-bold text-white tracking-wide">
-           🚀 AppdataAnailish
+                <!--Logo text matches 'AppName' -->
+     <div class="text-xl font-bold text-white tracking-wide">
+           🚀 AppName
       </div>
+                <!-- Exact required copyright text -->
        <div class="text-sm text-gray-400">
-        AppName All rights reserved.
-    </div>
+           &copy; 2026 AppName. All rights reserved.
+      </div>
+            </div>
         </div>
     </footer>
-    <script src="script.js"></script>
+    <!-- ✅ FIX JavaScript for hamburger menu toggle — no external file needed -->
+    <script>
+        function toggleMenu() {
+       const menu = document.getElementById('mobile-menu');
+            const iconOpen = document.getElementById('icon-open');
+    const iconClose = document.getElementById('icon-close');
+            // Toggle the menu visibility
+    menu.classList.toggle('hidden');
+            // Swap hamburger ↔ close icon
+        iconOpen.classList.toggle('hidden');
+            iconClose.classList.toggle('hidden');
+        }
+    </script>
 </body>
 </html>
