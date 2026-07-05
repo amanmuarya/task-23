@@ -10,16 +10,18 @@
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex-shrink-0 flex items-center cursor-pointer">
-                    <span class="text-2xl font-bold text-gray-900">AppName</span>
-                </div>
-                <!-- Desktop nav links -->
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#"
+                    <!-- set here name appName  -->
+<span class="text-2xl font-bold text-gray-900">AppName</span>
+</div>
+<!-- Desktop nav links
+ feature , pricing , about , contact  -->
+<div class="hidden md:flex items-center space-x-8">
+<a href="#"
 class="relative text-gray-600 hover:text-blue-600 font-medium transition duration-150 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 rounded-sm
 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-blue-600 after:transition-all after:duration-200 hover:after:w-full">Features</a>
 <a href="#"
 class="relative text-gray-600 hover:text-blue-600 font-medium transition duration-150 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 rounded-sm
-                        after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-blue-600 after:transition-all after:duration-200 hover:after:w-full">Pricing</a>
+after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-blue-600 after:transition-all after:duration-200 hover:after:w-full">Pricing</a>
                     <a href="#"
                         class="relative text-gray-600 hover:text-blue-600 font-medium transition duration-150 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 rounded-sm
                         after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-blue-600 after:transition-all after:duration-200 hover:after:w-full">About</a>
@@ -40,18 +42,19 @@ class="bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white px-5 py-2 rou
 aria-hidden="true">
 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
 d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                        <!-- Close icon, hidden until menu is open -->
+</svg>
+<!-- Close icon, hidden until menu is open -->
 <svg id="icon-close" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24"
 stroke="currentColor" aria-hidden="true">
 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
 d="M6 18L18 6M6 6l12 12" />
 </svg>
 </button>
-                </div>
+</div>
             </div>
         </div>
-        <!-- Mobile dropdown menu -->
+        <!-- Mobile dropdown menu 
+         hover to change color and under line text  -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-4 pb-4">
             <div class="flex flex-col space-y-3 pt-3">
                 <a href="#"
@@ -65,7 +68,7 @@ class="text-gray-600 hover:text-blue-600 font-medium transition duration-150 py-
                 <button
 class="bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white px-5 py-2 rounded-lg font-medium transition duration-200 shadow-sm w-full text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">
 Get Started
-                </button>
+</button>
             </div>
         </div>
     </nav>
@@ -85,6 +88,7 @@ AppName is a modern SaaS platform designed to help teams build, collaborate, and
 products efficiently. Join thousands of teams shipping better software today.
                     </p>
                     <div class="mt-8 flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+          <!-- here to creat btn to start free trial , and move hover to change size                -->
 <button
 class="bg-blue-600 hover:bg-blue-700 active:bg-blue-800 hover:scale-[1.03] text-white px-8 py-3.5 rounded-lg font-semibold shadow-lg shadow-blue-200 transition duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">
 Start Free Trial
@@ -93,6 +97,7 @@ Start Free Trial
 class="bg-white hover:bg-gray-50 text-gray-700 border border-gray-200 px-8 py-3.5 rounded-lg font-semibold shadow-sm transition duration-200 flex items-center justify-center gap-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">
 <svg class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20"
 aria-hidden="true">
+<!-- here to watch me demo btn  -->
 <path fill-rule="evenodd" clip-rule="evenodd"
 d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" />
 </svg>
@@ -113,30 +118,30 @@ class="w-full object-cover h-64 md:h-80 lg:h-96 rounded-2xl shadow-2xl ring-1 ri
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Powerful Features.</h2>
                 <p class="mt-4 text-lg text-gray-600">Everything you need to scale your application, without the
-                    complexity.</p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Lightning Fast -->
-                <div
-                    class="group bg-gray-100 p-8 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 ease-in-out border border-gray-300">
-                    <div
-                        class="bg-blue-200 w-14 h-14 rounded-lg flex items-center justify-center mb-6 transition duration-300 group-hover:scale-110 group-hover:rotate-3">
-                        <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+complexity.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Lightning Fast -->
+<div
+class="group bg-gray-100 p-8 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 ease-in-out border border-gray-300">
+<div
+class="bg-blue-200 w-14 h-14 rounded-lg flex items-center justify-center mb-6 transition duration-300 group-hover:scale-110 group-hover:rotate-3">
+<svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"
 aria-hidden="true">
 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
 d="M13 10V3L4 14h7v7l9-11h-7z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Lightning Fast</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        Optimized for speed and performance. Experience rapid load times and seamless interactions
-                        across all devices.
-                    </p>
-                </div>
-                <!-- Secure -->
-                <div
-                    class="group bg-gray-100 p-8 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 ease-in-out border border-gray-300">
-                    <div
+</svg>
+</div>
+<h3 class="text-xl font-bold text-gray-900 mb-3">Lightning Fast</h3>
+<p class="text-gray-600 leading-relaxed">
+Optimized for speed and performance. Experience rapid load times and seamless interactions
+across all devices.
+</p>
+</div>
+<!-- Secure -->
+<div
+class="group bg-gray-100 p-8 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 ease-in-out border border-gray-300">
+<div
 class="bg-indigo-100 w-14 h-14 rounded-lg flex items-center justify-center mb-6 transition duration-300 group-hover:scale-110 group-hover:rotate-3">
 <svg class="w-7 h-7 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"
 aria-hidden="true">
@@ -150,7 +155,7 @@ Enterprise-grade security built-in. Your data is encrypted and protected with in
 protocols.
                     </p>
                 </div>
-                <!-- Analytics -->
+<!-- Analytics -->
                 <div
                     class="group bg-gray-100 p-8 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 ease-in-out border border-gray-300">
                     <div
@@ -170,7 +175,8 @@ your success.
             </div>
         </div>
     </section>
-    <!-- Footer -->
+    <!-- Footer 
+     set footer and background-color gray wrire information -->
     <footer class="bg-gray-800 text-gray-300 py-10 border-t border-gray-700">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
@@ -179,6 +185,7 @@ your success.
             </div>
         </div>
     </footer>
+    <!-- here to write script click nav to auto hover coming opening screen -->
     <script>
         function toggleMenu() {
             const menu = document.getElementById('mobile-menu');
