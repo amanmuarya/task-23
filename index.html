@@ -7,37 +7,37 @@
 <body class="font-sans antialiased text-gray-800 bg-gray-50">
     <!-- Nav bar -->
     <nav class="sticky top-0 z-50 bg-white shadow-sm border-b border-gray-100">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex-shrink-0 flex items-center cursor-pointer">
-                    <!-- set here name appName  -->
+     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+      <div class="flex-shrink-0 flex items-center cursor-pointer">
+<!-- set here name appName  -->
 <span class="text-2xl font-bold text-gray-900">AppName</span>
 </div>
 <!-- Desktop nav links
  feature , pricing , about , contact  -->
 <div class="hidden md:flex items-center space-x-8">
-<a href="#"
+<a href="#Features"
 class="relative text-gray-600 hover:text-blue-600 font-medium transition duration-150 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 rounded-sm
 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-blue-600 after:transition-all after:duration-200 hover:after:w-full">Features</a>
-<a href="#"
-class="relative text-gray-600 hover:text-blue-600 font-medium transition duration-150 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 rounded-sm
+<a href="#Pricing"
+class="relative text-gray-600 hover:text-blue-600 font-medium transition duration-150 focus-visible:outline focus-visible:outline-2  focus-visible:outline-blue-600 rounded-sm
 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-blue-600 after:transition-all after:duration-200 hover:after:w-full">Pricing</a>
-                    <a href="#"
-                        class="relative text-gray-600 hover:text-blue-600 font-medium transition duration-150 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 rounded-sm
-                        after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-blue-600 after:transition-all after:duration-200 hover:after:w-full">About</a>
-                    <a href="#"
-                        class="relative text-gray-600 hover:text-blue-600 font-medium transition duration-150 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 rounded-sm
-                        after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-blue-600 after:transition-all after:duration-200 hover:after:w-full">Contact</a>
-                    <button
-class="bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white px-5 py-2 rounded-lg font-medium transition duration-200 shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">
-                        Get Started
-                    </button>
-                </div>
-                <!-- Hamburger menu button -->
-                <div class="flex md:hidden items-center">
-                    <button id="hamburger-btn" onclick="toggleMenu()"
-                        class="text-gray-600 hover:text-gray-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 rounded-sm"
-                        aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle navigation menu">
+         <a href="#About"
+          class="relative text-gray-600 hover:text-blue-600 font-medium transition duration-150 focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-600 rounded-sm
+           after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-blue-600 after:transition-all after:duration-200 hover:after:w-full">About</a>
+            <a href="#Contact"
+            class="relative text-gray-600 hover:text-blue-600 font-medium transition duration-150 focus-visible:outline focus-visible:outline-2  focus-visible:outline-blue-600 rounded-sm
+          after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-blue-600 after:transition-all after:duration-200 hover:after:w-full">Contact</a>
+             <button
+class="bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white px-5 py-2 rounded-lg font-medium transition duration-200 shadow-sm focus-visible:outline focus-visible:outline-blue-600">
+    Get Started
+         </button>
+          </div>
+          <!-- Hamburger menu button -->
+      <div class="flex md:hidden items-center">
+          <button id="hamburger-btn" onclick="toggleMenu()"
+class="text-gray-600 hover:text-gray-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 rounded-sm"
+aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle navigation menu">
 <svg id="icon-open" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"
 aria-hidden="true">
 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -55,46 +55,46 @@ d="M6 18L18 6M6 6l12 12" />
         </div>
         <!-- Mobile dropdown menu 
          hover to change color and under line text  -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-4 pb-4">
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100    px-4 pb-4">
             <div class="flex flex-col space-y-3 pt-3">
-                <a href="#"
-                    class="text-gray-600 hover:text-blue-600 font-medium transition duration-150 py-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 rounded-sm">Features</a>
-                <a href="#"
-                    class="text-gray-600 hover:text-blue-600 font-medium transition duration-150 py-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 rounded-sm">Pricing</a>
-                <a href="#"
-                    class="text-gray-600 hover:text-blue-600 font-medium transition duration-150 py-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 rounded-sm">About</a>
-                <a href="#"
+<a href="#Features"
+     class="text-gray-600 hover:text-blue-600 font-medium   transition duration-150 py-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 rounded-sm">Features</a>
+        <a href="#Pricing"
+           class="text-gray-600   hover:text-blue-600   font-medium transition duration-150 py-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 rounded-sm">Pricing</a>
+        <a href="#About"
+            class="text-gray-600 hover:text-blue-600 font-medium transition duration-150 py-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 rounded-sm">About</a>
+        <a href="#Contact"
 class="text-gray-600 hover:text-blue-600 font-medium transition duration-150 py-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 rounded-sm">Contact</a>
-                <button
-class="bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white px-5 py-2 rounded-lg font-medium transition duration-200 shadow-sm w-full text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">
+     <button
+class="bg-blue-600 hover:bg-blue-700   active:bg-blue-800 text-white px-5 py-2 rounded-lg font-medium transition duration-200 shadow-sm w-full text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">
 Get Started
 </button>
             </div>
         </div>
     </nav>
     <!-- Hero section -->
-    <section class="bg-gradient-to-br from-blue-50 via-white to-indigo-50 py-16 lg:py-24 overflow-hidden">
+    <section class="bg-gradient-to-br   from-blue-50   via-white to-indigo-50 py-16 lg:py-24 overflow-hidden">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-8">
+            <div class="flex flex-col lg:flex-row   items-center gap-12 lg:gap-8">
 <div class="flex-1 text-center lg:text-left space-y-8">
 <h1
-class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight leading-tight">
+class="text-4xl md:text-5xl lg:text-6xl   font-extrabold text-gray-900 tracking-tight leading-tight">
 Build Amazing <br class="hidden lg:block" />
 Products <span
-class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Faster</span>
+class="text-transparent bg-clip-text    bg-gradient-to-r from-blue-600 to-indigo-600">Faster</span>
                     </h1>
                     <p class="mt-4 text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto lg:mx-0">
 AppName is a modern SaaS platform designed to help teams build, collaborate, and launch scalable
 products efficiently. Join thousands of teams shipping better software today.
                     </p>
-                    <div class="mt-8 flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+                    <div class="mt-8 flex flex-col sm:flex-row justify-center   lg:justify-start gap-4">
           <!-- here to creat btn to start free trial , and move hover to change size                -->
 <button
-class="bg-blue-600 hover:bg-blue-700 active:bg-blue-800 hover:scale-[1.03] text-white px-8 py-3.5 rounded-lg font-semibold shadow-lg shadow-blue-200 transition duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">
+class="bg-blue-600 hover:bg-blue-700 active:bg-blue-800   hover:scale-[1.03] text-white px-8 py-3.5 rounded-lg font-semibold shadow-lg shadow-blue-200 transition duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">
 Start Free Trial
 </button>
 <button
-class="bg-white hover:bg-gray-50 text-gray-700 border border-gray-200 px-8 py-3.5 rounded-lg font-semibold shadow-sm transition duration-200 flex items-center justify-center gap-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">
+class="bg-white hover:bg-gray-50  text-gray-700 border   border-gray-200 px-8 py-3.5 rounded-lg font-semibold shadow-sm transition duration-200 flex items-center justify-center gap-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">
 <svg class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20"
 aria-hidden="true">
 <!-- here to watch me demo btn  -->
@@ -105,53 +105,56 @@ Watch Demo
 </button>
 </div>
 </div>
-<div class="flex-1 w-full max-w-xl lg:max-w-none mx-auto">
-<img src="daisbord.webp" alt=" AppName product dashboard" loading="lazy"
+<div class="flex-1 w-full max-w-xl lg:max-w-none  mx-auto">
+    <!-- here to link img src  -->
+<img src="daisbord.webp" alt=" AppName product   dashboard" loading="lazy"
 class="w-full object-cover h-64 md:h-80 lg:h-96 rounded-2xl shadow-2xl ring-1 ring-gray-900/5">
-                </div>
+   </div>
             </div>
         </div>
     </section>
     <!-- Features section -->
     <section class="py-20 bg-white">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Powerful Features.</h2>
-                <p class="mt-4 text-lg text-gray-600">Everything you need to scale your application, without the
+            <div class="text-center max-w-3xl   mx-auto mb-16">
+    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Powerful Features.</h2>
+      <p class="mt-4 text-lg text-gray-600">Everything you need to scale your application, without the
 complexity.</p>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="grid grid-cols-1   md:grid-cols-3 gap-8">
 <!-- Lightning Fast -->
 <div
 class="group bg-gray-100 p-8 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 ease-in-out border border-gray-300">
 <div
-class="bg-blue-200 w-14 h-14 rounded-lg flex items-center justify-center mb-6 transition duration-300 group-hover:scale-110 group-hover:rotate-3">
+class="bg-blue-200 w-14 h-14   rounded-lg flex items-center justify-center mb-6 transition duration-300 group-hover:scale-110 group-hover:rotate-3">
 <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"
 aria-hidden="true">
 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
 d="M13 10V3L4 14h7v7l9-11h-7z" />
 </svg>
 </div>
-<h3 class="text-xl font-bold text-gray-900 mb-3">Lightning Fast</h3>
+<h3 class="text-xl font-bold   text-gray-900 mb-3">Lightning Fast</h3>
 <p class="text-gray-600 leading-relaxed">
 Optimized for speed and performance. Experience rapid load times and seamless interactions
 across all devices.
 </p>
 </div>
-<!-- Secure -->
+<!-- Secure 
+ to  hover:-translate-y-1   
+ icone add svg -->
 <div
-class="group bg-gray-100 p-8 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 ease-in-out border border-gray-300">
+class="group bg-gray-100 p-8 rounded-2xl    shadow-sm hover:shadow-xl    hover:-translate-y-1 transition duration-300 ease-in-out border border-gray-300">
 <div
-class="bg-indigo-100 w-14 h-14 rounded-lg flex items-center justify-center mb-6 transition duration-300 group-hover:scale-110 group-hover:rotate-3">
+class="bg-indigo-100 w-14 h-14 rounded-lg    flex items-center justify-center mb-6 transition duration-300 group-hover:scale-110 group-hover:rotate-3">
 <svg class="w-7 h-7 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"
 aria-hidden="true">
 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
 d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
 </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Secure</h3>
-                    <p class="text-gray-600 leading-relaxed">
-Enterprise-grade security built-in. Your data is encrypted and protected with industry-leading
+</div>
+<h3 class="text-xl    font-bold text-gray-900   mb-3">Secure</h3>
+<p class="text-gray-600   leading-relaxed">
+Enterprise-grade security built-in.   Your data is encrypted and protected with industry-leading
 protocols.
                     </p>
                 </div>
