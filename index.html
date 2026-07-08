@@ -1,260 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>AppName - Build Amazing Products</title>
+    <title>AppName - Build Amazing Products Faster</title>
+    <!--
+    We are loading Tailwind CSS directly from a CDN (Content Delivery Network).
+    This lets us use Tailwind's utility classes (like "flex", "grid", "p-4")
+  -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* simple animations  */
-        /* mobile menu slides down instead of just popping in/out */
-        #mobile-menu {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease;
-        }
-        #mobile-menu.menu-open {
-            max-height: 400px;
-            /* big enough to show all the links */
-        }
-        /* fade + move up animation, used for hero text and feature cards */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-           opacity: 1;
-           transform: translateY(0);
-            }
-        }
-        .fade-in-up {
-            opacity: 0;
-        }
-
-        .fade-in-up.show {
-            animation: fadeInUp 0.6s ease forwards;
-        }
-    </style>
 </head>
+<body class="font-sans text-gray-800 antialiased">
+    <!-- 
+"sticky top-0" keeps the navbar fixed
+       to the top of the screen even when the user scrolls.
+       "z-50" makes sure it stays ABOVE other content.
+   -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <nav class="max-w-7xl mx-auto flex items-center justify-between px-4 py-4 md:px-8">
+            <!-- Logo (always visible, left side) -->
+            <a href="#" class="text-2xl font-extrabold text-indigo-600 flex items-center gap-1">
+                🚀 <span>AppName</span>
+            </a>
+            <!--
+        "hidden md:flex" means:
+         "hidden"   hide by default (mobile screens)
+        "md:flex"   show as a flex row from the "md" breakpoint (768px) upward
+        This is the core "mobile-first" pattern in Tailwind.
+      -->
+            <ul class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <li><a href="#features" class="hover:text-indigo-600 transition-colors">Features</a></li>
+                <li><a href="#pricing" class="hover:text-indigo-600 transition-colors">Pricing</a></li>
+                <li><a href="#about" class="hover:text-indigo-600 transition-colors">About</a></li>
+                <li><a href="#contact" class="hover:text-indigo-600 transition-colors">Contact</a></li>
+            </ul>
 
-<body class="font-sans antialiased text-gray-800 bg-gray-50">
-    <!-- Nav bar -->
-    <nav class="sticky top-0 z-50 bg-white shadow-sm border-b border-gray-100">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex-shrink-0 flex items-center cursor-pointer">
-                    <!-- set here name appName  -->
-                    <span class="text-2xl font-bold text-gray-900">AppName</span>
-                </div>
-                <!-- Desktop nav links
- feature , pricing , about , contact  -->
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#Features"
-                        class="relative text-gray-600 hover:text-blue-600 font-medium transition duration-150 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 rounded-sm
-after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-blue-600 after:transition-all after:duration-200 hover:after:w-full">Features</a>
-                    <a href="#Pricing"
-                        class="relative text-gray-600 hover:text-blue-600 font-medium transition duration-150 focus-visible:outline focus-visible:outline-2  focus-visible:outline-blue-600 rounded-sm
-after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-blue-600 after:transition-all after:duration-200 hover:after:w-full">Pricing</a>
-                    <a href="#About"
-                        class="relative text-gray-600 hover:text-blue-600 font-medium transition duration-150 focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-600 rounded-sm
-           after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-blue-600 after:transition-all after:duration-200 hover:after:w-full">About</a>
-                    <a href="#Contact"
-                        class="relative text-gray-600 hover:text-blue-600 font-medium transition duration-150 focus-visible:outline focus-visible:outline-2  focus-visible:outline-blue-600 rounded-sm
-          after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-blue-600 after:transition-all after:duration-200 hover:after:w-full">Contact</a>
-                    <button
-                        class="bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white px-5 py-2 rounded-lg font-medium transition duration-200 shadow-sm focus-visible:outline focus-visible:outline-blue-600">
-                        Get Started
-                    </button>
-                </div>
-                <!-- Hamburger menu button -->
-                <div class="flex md:hidden items-center">
-                    <button id="hamburger-btn" onclick="toggleMenu()"
-                        class="text-gray-600 hover:text-gray-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 rounded-sm"
-                        aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle navigation menu">
-                        <svg id="icon-open" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                            aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                        <!-- Close icon, hidden until menu is open -->
-                        <svg id="icon-close" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
+            <!-- "Get Started" button - only shown on tablet/desktop next to the links -->
+            <button
+                class="hidden md:inline-block bg-indigo-600 text-white text-sm font-semibold px-5 py-2.5 rounded-lg hover:bg-indigo-700 transition-colors">
+                Get Started
+            </button>
+
+            <!--
+        MOBILE MENU ICON (hamburger)
+        "md:hidden" -> only visible BELOW the md breakpoint (i.e. on mobile/small screens)
+        We use a tiny bit of vanilla JavaScript below to toggle the mobile menu open/closed.
+      -->
+            <button id="menu-btn" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"
+                class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:bg-gray-100"
+                aria-label="Toggle menu">
+                <!-- simple 3-line hamburger icon made with SVG (no custom CSS needed) -->
+     <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor" stroke-width="2">
+         <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+         </svg>
+            </button>
+        </nav>
+        <!--
+      Hidden by default ("hidden" class). JS toggles this class on click above.
+      "flex-col" stacks the links vertically, which makes sense on narrow screens.
+    -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-4 pb-4">
+            <ul class="flex flex-col gap-4 pt-4 text-sm font-medium">
+                <li><a href="#features" class="block hover:text-indigo-600">Features</a></li>
+                <li><a href="#pricing" class="block hover:text-indigo-600">Pricing</a></li>
+                <li><a href="#about" class="block hover:text-indigo-600">About</a></li>
+                <li><a href="#contact" class="block hover:text-indigo-600">Contact</a></li>
+            </ul>
+            <button
+      class="mt-4 w-full bg-indigo-600 text-white font-semibold px-5 py-2.5 rounded-lg hover:bg-indigo-700 transition-colors">
+       Get Started
+            </button>
         </div>
-        <!-- Mobile dropdown menu 
-         hover to change color and under line text  -->
-        <div id="mobile-menu" class="md:hidden bg-white border-t border-gray-100    px-4 pb-4">
-            <div class="flex flex-col space-y-3 pt-3">
-                <a href="#Features" onclick="closeMenu()"
-                    class="text-gray-600 hover:text-blue-600 font-medium   transition duration-150 py-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 rounded-sm">Features</a>
-                <a href="#Pricing" onclick="closeMenu()"
-                    class="text-gray-600   hover:text-blue-600   font-medium transition duration-150 py-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 rounded-sm">Pricing</a>
-                <a href="#About" onclick="closeMenu()"
-                    class="text-gray-600 hover:text-blue-600 font-medium transition duration-150 py-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 rounded-sm">About</a>
-                <a href="#Contact" onclick="closeMenu()"
-                    class="text-gray-600 hover:text-blue-600 font-medium transition duration-150 py-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 rounded-sm">Contact</a>
-                <button
-                    class="bg-blue-600 hover:bg-blue-700   active:bg-blue-800 text-white px-5 py-2 rounded-lg font-medium transition duration-200 shadow-sm w-full text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">
-                    Get Started
-                </button>
+    </header>
+    <!-- 
+        HERO SECTION (Responsive Flex Layout)
+       - "flex-col" stacked layout by default (mobile)
+       - "lg:flex-row" side-by-side layout from "lg" (1024px) upward
+  -->
+    <section class="bg-gradient-to-br from-indigo-600 via-indigo-700 to-purple-700">
+        <div class="max-w-7xl mx-auto px-6 py-16 md:px-12 md:py-20 lg:py-28
+                flex flex-col lg:flex-row items-center gap-12">
+            <!-- Left side: text content -->
+            <div class="flex-1 text-center lg:text-left">
+       <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight">
+         Build Amazing Products Faster
+      </h1>
+     <p class="mt-6 text-lg text-indigo-100 max-w-xl mx-auto lg:mx-0">
+      AppName gives your team the tools to design, collaborate, and ship
+       products together — all from one simple, powerful workspace.
+      </p>
+      <!--
+          BUTTON GROUP
+          "flex-col sm:flex-row" -> buttons stack on very small screens,
+          then sit side-by-side from the "sm" breakpoint (640px) up.
+        -->
+       <div class="mt-8 flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
+    <button
+     class="w-full sm:w-auto bg-white text-indigo-700 font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-gray-100 transition-colors">
+      Start Free Trial
+         </button>
+          <button
+         class="w-full sm:w-auto border-2 border-white text-white font-semibold px-6 py-3 rounded-lg hover:bg-white hover:text-indigo-700 transition-colors">
+        Watch Demo
+         </button>
+           </div>
             </div>
-        </div>
-    </nav>
-    <!-- Hero section -->
-    <section class="bg-gradient-to-br   from-blue-50   via-white to-indigo-50 py-16 lg:py-24 overflow-hidden">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col lg:flex-row   items-center gap-12 lg:gap-8">
-                <div class="flex-1 text-center lg:text-left space-y-8 fade-in-up show">
-                    <h1
-                        class="text-4xl md:text-5xl lg:text-6xl   font-extrabold text-gray-900 tracking-tight leading-tight">
-                        Build Amazing <br class="hidden lg:block" />
-                        Products <span
-                            class="text-transparent bg-clip-text    bg-gradient-to-r from-blue-600 to-indigo-600">Faster</span>
-                    </h1>
-                    <p class="mt-4 text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto lg:mx-0">
-                        AppName is a modern SaaS platform designed to help teams build, collaborate, and launch scalable
-                        products efficiently. Join thousands of teams shipping better software today.
-                    </p>
-                    <div class="mt-8 flex flex-col sm:flex-row justify-center   lg:justify-start gap-4">
-                        <!-- here to creat btn to start free trial , and move hover to change size                -->
-                        <button
-                            class="bg-blue-600 hover:bg-blue-700 active:bg-blue-800   hover:scale-[1.03] text-white px-8 py-3.5 rounded-lg font-semibold shadow-lg shadow-blue-200 transition duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">
-                            Start Free Trial
-                        </button>
-                        <button
-                            class="bg-white hover:bg-gray-50  text-gray-700 border   border-gray-200 px-8 py-3.5 rounded-lg font-semibold shadow-sm transition duration-200 flex items-center justify-center gap-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">
-                            <svg class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20"
-                                aria-hidden="true">
-                                <!-- here to watch me demo btn  -->
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" />
-                            </svg>
-                            Watch Demo
-                        </button>
-                    </div>
-                </div>
-                <div class="flex-1 w-full max-w-xl lg:max-w-none  mx-auto">
-                    <!-- here to link img src  -->
-                    <img src="daisbord.webp" alt=" AppName product   dashboard" loading="lazy"
-                        class="w-full object-cover h-64 md:h-80 lg:h-96 rounded-2xl shadow-2xl ring-1 ring-gray-900/5">
-                </div>
+            <!-- Right side: responsive image -->
+            <div class="flex-1 w-full">
+                <!--
+    Here to set --
+          "h-64 md:h-80 lg:h-96" changes the IMAGE HEIGHT at each breakpoint.
+          "object-cover" makes sure the image fills that height nicely
+          without stretching or distorting.
+          "rounded-2xl" + "shadow-2xl" give rounded corners and a soft shadow.
+        -->
+                <img src="daisbord.webp"
+     alt="AppName product dashboard preview"
+      class="w-full h-64 md:h-80 lg:h-96 object-cover rounded-2xl shadow-2xl" />
             </div>
         </div>
     </section>
-    <!-- Features section -->
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl   mx-auto mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Powerful Features.</h2>
-                <p class="mt-4 text-lg text-gray-600">Everything you need to scale your application, without the
-                    complexity.</p>
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-                <!-- Lightning Fast -->
+    <!--
+       3) FEATURES SECTION (Responsive Grid System
+       BEGINNER NOTE:
+        "grid-cols-1"- 1 column on mobile (cards stacked)
+       "md:grid-cols-3"- 3 columns from "md" (768px) upward
+"gap-8"-- consistent spacing between grid items
+ -->
+ <section id="features" class="bg-gray-50 py-16 px-6 md:px-12">
+        <div class="max-w-7xl mx-auto">
+  <h2 class="text-3xl md:text-4xl font-bold text-center">
+    Powerful Features
+            </h2>
+    <p class="mt-3 text-center text-gray-600 max-w-2xl mx-auto">
+       Everything your team needs to move from idea to launch, built into one platform.
+            </p>
+     <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+     <!-- Feature Card 1 -->
                 <div
-                    class="group bg-gray-100 p-8 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 ease-in-out border border-gray-300 fade-in-up">
-                    <div
-                        class="bg-blue-200 w-14 h-14   rounded-lg flex items-center justify-center mb-6 transition duration-300 group-hover:scale-110 group-hover:rotate-3">
-                        <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                            aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M13 10V3L4 14h7v7l9-11h-7z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold   text-gray-900 mb-3">Lightning Fast</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        Optimized for speed and performance. Experience rapid load times and seamless interactions
-                        across all devices.
-                    </p>
-                </div>
-                <!-- Secure 
- to  hover:-translate-y-1   
- icone add svg -->
+             class="bg-white rounded-xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+             <div class="text-4xl mb-4">⚡</div>
+             <h3 class="text-xl font-semibold">Lightning Fast</h3>
+            <p class="mt-2 text-gray-600">
+          Optimized performance ensures your team never waits around for the tools to catch up.
+        </p>
+       </div>
+       <!-- Feature Card 2 -->
+       <div
+          class="bg-white rounded-xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+          <div class="text-4xl mb-4">🔒</div>
+          <h3 class="text-xl font-semibold">Secure</h3>
+      <p class="mt-2 text-gray-600">
+      Enterprise-grade security keeps your data protected at every step, always.
+      </p>
+      </div>
+  <!-- Feature Card 3 -->
                 <div
-                    class="group bg-gray-100 p-8 rounded-2xl    shadow-sm hover:shadow-xl    hover:-translate-y-1 transition duration-300 ease-in-out border border-gray-300 fade-in-up">
-                    <div
-                        class="bg-indigo-100 w-14 h-14 rounded-lg    flex items-center justify-center mb-6 transition duration-300 group-hover:scale-110 group-hover:rotate-3">
-                        <svg class="w-7 h-7 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                            aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl    font-bold text-gray-900   mb-3">Secure</h3>
-                    <p class="text-gray-600   leading-relaxed">
-                        Enterprise-grade security built-in. Your data is encrypted and protected with industry-leading
-                        protocols.
-                    </p>
-                </div>
-                <!-- Analytics -->
-                <div
-                    class="group bg-gray-100 p-8 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 ease-in-out border border-gray-300 fade-in-up">
-                    <div
-                        class="bg-purple-100 w-14 h-14 rounded-lg flex items-center justify-center mb-6 transition duration-300 group-hover:scale-110 group-hover:rotate-3">
-                        <svg class="w-7 h-7 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                            aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Analytics</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        Gain actionable insights with our powerful built-in dashboard. Track user behavior and measure
-                        your success.
-                    </p>
-                </div>
+      class="bg-white rounded-xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+          <div class="text-4xl mb-4">📊</div>
+   <h3 class="text-xl font-semibold">Analytics</h3>
+      <p class="mt-2 text-gray-600">
+        Track progress with real-time dashboards and insights that help you make decisions.
+       </p>
+      </div>
             </div>
         </div>
     </section>
-    <!-- Footer 
-     set footer and background-color gray wrire information -->
-    <footer class="bg-gray-800 text-gray-300 py-10 border-t border-gray-700">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
-                <div class="text-xl font-bold text-white tracking-wide">AppName</div>
-                <div class="text-sm text-gray-400">&copy; 2026 AppName. All rights reserved.</div>
-            </div>
+    <!--
+     FOOTER SECTION (Responsive Flex Layout)
+       - "flex-col"     logo and copyright stack vertically on mobil
+  -->
+    <footer class="bg-gray-900 text-white py-8 px-6 md:px-12">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+     <div class="text-xl font-bold flex items-center gap-1">
+     🚀 <span>AppName</span>
+       </div>
+      <p class="text-sm text-gray-400 text-center">
+   © 2026 AppName. All rights reserved.
+  </p>
         </div>
     </footer>
-    <!-- here to write script click nav to auto hover coming opening screen -->
-    <script>
-        const menu = document.getElementById('mobile-menu');
-        const hamburgerBtn = document.getElementById('hamburger-btn');
-        const iconOpen = document.getElementById('icon-open');
-        const iconClose = document.getElementById('icon-close');
-        // open/close the mobile menu
-        function toggleMenu() {
-            const isOpen = menu.classList.contains('menu-open');
-            menu.classList.toggle('menu-open');
-            iconOpen.classList.toggle('hidden');
-            iconClose.classList.toggle('hidden');
-            // keep screen readers in sync with what is showing
-            hamburgerBtn.setAttribute('aria-expanded', String(!isOpen));
-        }
-        // just closes the menu (used when a link inside it is clicked)
-        function closeMenu() {
-            menu.classList.remove('menu-open');
-            iconOpen.classList.remove('hidden');
-            iconClose.classList.add('hidden');
-            hamburgerBtn.setAttribute('aria-expanded', 'false');
-        }
-        // watch the feature cards and add the "show" class once they
-        // scroll into view, so they fade in instead of just appearing
-        const cardsToWatch = document.querySelectorAll('.fade-in-up:not(.show)');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('show');
-                    observer.unobserve(entry.target); // only animate once
-                }
-            });
-        }, { threshold: 0.2 });
-
-        cardsToWatch.forEach((card) => observer.observe(card));
-    </script>
 </body>
 </html>
