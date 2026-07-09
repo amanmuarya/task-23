@@ -2,10 +2,9 @@
 A simple responsive landing page built with HTML and Tailwind CSS.
 
 # 🚀 AppName — Responsive Landing Page
- 
 A fully responsive SaaS landing page built with **Tailwind CSS (CDN)** — no custom CSS, no build tools, just utility classes. Created as a learning-friendly demo of mobile-first responsive design using Flexbox and Grid 
 
-No custom `.css` files, no Sass, no CSS frameworks besides Tailwind.
+** No custom `.css` files, no Sass, no CSS frameworks besides Tailwind.
  
 ## Responsive Breakpoints Used
  
@@ -35,6 +34,7 @@ Tailwind is ** mobile-first ** — unprefixed classes apply to * all * screens, 
 ## Learning Notes
   - make and learning  this task to meadia qurary for many screen like 
   mobile , tab , laptop .. , hover set color smooth landind page .. 
+  uese script to hidean form and togle 
 ## How to Run
 No build step needed — it's a static HTML file.
 1. Download `index.html`

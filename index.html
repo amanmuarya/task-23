@@ -1,32 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <title>AppName - Build Amazing Products Faster</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-
 <body class="font-sans text-gray-800 antialiased scroll-smooth">
-
     <header class="sticky top-0 z-50 bg-white shadow-md">
         <nav class="max-w-7xl mx-auto flex items-center justify-between px-4 py-4 md:px-8">
             <a href="#" class="text-2xl font-extrabold text-indigo-600 flex items-center gap-1">
                 🚀 <span>AppName</span>
             </a>
-
             <ul class="hidden md:flex items-center gap-8 text-sm font-medium">
                 <li><a href="#features" class="hover:text-indigo-600 transition-colors">Features</a></li>
                 <li><a href="#pricing" class="hover:text-indigo-600 transition-colors">Pricing</a></li>
                 <li><a href="#about" class="hover:text-indigo-600 transition-colors">About</a></li>
                 <li><a href="#contact" class="hover:text-indigo-600 transition-colors">Contact</a></li>
             </ul>
-
+<!-- here to set button --- color font-size and rounded-lg  -->
             <button
                 class="hidden md:inline-block bg-indigo-600 text-white text-sm font-semibold px-5 py-2.5 rounded-lg hover:bg-indigo-700 transition-colors">
                 Get Started
             </button>
-
+   <!-- here set second button use icone set desine md-headin  -->
             <button id="menu-btn" onclick="toggleMobileMenu()"
                 class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:bg-gray-100 transition-colors"
                 aria-label="Toggle menu">
@@ -36,7 +31,6 @@
                 </svg>
             </button>
         </nav>
-
         <div id="mobile-menu"
             class="hidden md:hidden bg-white border-t border-gray-100 px-4 pb-4 shadow-lg absolute w-full">
             <ul class="flex flex-col gap-4 pt-4 text-sm font-medium">
@@ -59,7 +53,6 @@
             </button>
         </div>
     </header>
-
     <section class="bg-gradient-to-br from-indigo-600 via-indigo-700 to-purple-700">
         <div
             class="max-w-7xl mx-auto px-6 py-16 md:px-12 md:py-20 lg:py-28 flex flex-col lg:flex-row items-center gap-12">
@@ -88,7 +81,6 @@
             </div>
         </div>
     </section>
-
     <section id="features" class="bg-gray-50 py-16 px-6 md:px-12">
         <div class="max-w-7xl mx-auto">
             <h2 class="text-3xl md:text-4xl font-bold text-center">Powerful Features</h2>
@@ -120,7 +112,6 @@
             </div>
         </div>
     </section>
-
     <section id="about" class="py-16 px-6 md:px-12 bg-white">
         <div class="max-w-4xl mx-auto text-center">
             <h2 class="text-3xl md:text-4xl font-bold">About Us</h2>
@@ -133,19 +124,19 @@
             </p>
         </div>
     </section>
-
     <section id="pricing" class="bg-gray-50 py-16 px-6 md:px-12">
         <div class="max-w-7xl mx-auto">
             <h2 class="text-3xl md:text-4xl font-bold text-center">Simple, Transparent Pricing</h2>
             <p class="mt-3 text-center text-gray-600 max-w-2xl mx-auto">No hidden fees, no surprises. Pick the plan that
                 fits your team.</p>
-
+<!-- here to set VIP , you perchages easly and your reqrement 
+ there three type subscripton and desine set color blue and gap-8 , items-center  -->
             <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
                 <!-- <div class="bg-white rounded-2xl p-8 shadow-md border border-gray-100"> -->
                     <h3 class="text-2xl font-semibold text-gray-900">Starter</h3>
                     <p class="mt-4 flex items-baseline gap-2">
                         <span class="text-4xl font-extrabold tracking-tight">$9</span>
-                        <span class="text-gray-500">/month</span>
+<span class="text-gray-500">/month</span>
                     </p>
                     <p class="mt-4 text-gray-600 text-sm">Perfect for individuals and small projects.</p>
                     <ul class="mt-6 space-y-4 text-sm text-gray-600">
@@ -157,7 +148,6 @@
                         class="mt-8 w-full bg-indigo-50 text-indigo-700 font-semibold px-5 py-3 rounded-lg hover:bg-indigo-100 transition-colors">Choose
                         Starter</button>
                 </div>
-
                 <div class="bg-indigo-600 rounded-2xl p-8 shadow-2xl transform md:-translate-y-4">
                     <h3 class="text-2xl font-semibold text-white">Pro</h3>
                     <p class="mt-4 flex items-baseline gap-2 text-white">
@@ -168,14 +158,13 @@
                     <ul class="mt-6 space-y-4 text-sm text-indigo-100">
                         <!-- <li class="flex items-center gap-2">✔️ Unlimited Projects</li> -->
                         <li class="flex items-center gap-2">✔️ Advanced Analytics</li>
-                        <li class="flex items-center gap-2">✔️ 1-hour Support Response</li>
+<li class="flex items-center gap-2">✔️ 1-hour Support Response</li>
                         <li class="flex items-center gap-2">✔️ Custom Integrations</li>
                     </ul>
                     <button
                         class="mt-8 w-full bg-white text-indigo-600 font-bold px-5 py-3 rounded-lg hover:bg-gray-50 transition-colors shadow-sm">Choose
                         Pro</button>
                 </div>
-
                 <div class="bg-white rounded-2xl p-8 shadow-md border border-gray-100">
                     <h3 class="text-2xl font-semibold text-gray-900">Enterprise</h3>
                     <p class="mt-4 flex items-baseline gap-2">
@@ -196,7 +185,7 @@
             </div>
         </div>
     </section>
-
+<!-- here to last section -- bg-color-white and text-color-gray and set rounded mx-auto  -->
     <section id="contact" class="py-16 px-6 md:px-12 bg-white">
         <div class="max-w-3xl mx-auto">
             <h2 class="text-3xl md:text-4xl font-bold text-center">Get in Touch</h2>
@@ -212,13 +201,13 @@
                     <div>
                         <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
                         <input type="email" id="email"
-                            class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                     </div>
                 </div>
                 <div>
                     <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
                     <textarea id="message" rows="4"
-                        class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"></textarea>
+class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"></textarea>
                 </div>
                 <button type="button"
                     class="w-full bg-indigo-600 text-white font-semibold py-3 px-4 rounded-md shadow hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors">
@@ -227,7 +216,7 @@
             </form>
         </div>
     </section>
-
+<!-- here desine footer and set color gray-400 ,  -->
     <footer class="bg-gray-900 text-white py-8 px-6 md:px-12">
         <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
             <div class="text-xl font-bold flex items-center gap-1">
@@ -238,20 +227,17 @@
             </p>
         </div>
     </footer>
-
+<!-- Here to write script and use mobile-menu and hidden form  -->
     <script>
         const mobileMenu = document.getElementById('mobile-menu');
-
         // Toggles the menu when the hamburger icon is clicked
         function toggleMobileMenu() {
             mobileMenu.classList.toggle('hidden');
         }
-
-        // Closes the menu automatically when a link is clicked
+// Closes the menu automatically when a link is clicked
         function closeMobileMenu() {
             mobileMenu.classList.add('hidden');
         }
     </script>
 </body>
-
 </html>
